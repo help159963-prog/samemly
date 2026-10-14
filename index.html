@@ -8,363 +8,567 @@
 <style>
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-html { scroll-behavior: smooth; }
-
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: #080710;
+  background: #08080e;
   color: white;
-  line-height: 1.8;
 }
 
 header {
-  padding: 18px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  border-bottom: 1px solid #57209b;
-  background: #0b0915;
+  padding: 20px;
+  text-align: center;
+  background: #11101c;
+  border-bottom: 2px solid #a855f7;
 }
 
 .logo {
-  font-size: 27px;
-  font-weight: bold;
   color: #c084fc;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 8px;
-}
-
-nav a:hover { color: #c084fc; }
-
-.button {
-  display: inline-block;
-  background: linear-gradient(90deg, #7c18ff, #c026ff);
-  color: white;
-  padding: 12px 23px;
-  border-radius: 30px;
-  text-decoration: none;
+  font-size: 30px;
   font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: .3s;
 }
 
-.button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px #8b20ff;
+header p {
+  color: #ccc;
 }
 
 .hero {
+  padding: 45px 20px;
   text-align: center;
-  padding: 80px 20px;
-  background: radial-gradient(ellipse at top, #35105c, #080710 70%);
+  background: linear-gradient(135deg, #180b2e, #08080e);
 }
 
 .hero h1 {
-  font-size: clamp(36px, 7vw, 60px);
-  line-height: 1.4;
+  font-size: 34px;
+  color: #d8b4fe;
 }
-
-.purple { color: #c084fc; }
 
 .hero p {
-  color: #d0c6df;
-  margin: 18px auto 25px;
-  max-width: 600px;
+  color: #ddd;
+  line-height: 1.9;
 }
 
-section { padding: 55px 6%; }
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 8px;
+  background: #9333ea;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
 
-.section-title {
+section {
+  padding: 25px 15px;
+}
+
+h2 {
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 10px;
+  color: #c084fc;
 }
 
-.subtitle {
-  text-align: center;
-  color: #c4b5d8;
-  margin-bottom: 35px;
-}
-
-.grid {
+.categories, .designs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 14px;
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
-.card {
-  background: linear-gradient(145deg, #171126, #0d0b16);
-  border: 1px solid #59219a;
-  border-radius: 18px;
-  padding: 25px 18px;
+.category, .card {
+  background: #151420;
+  border: 1px solid #343044;
+  border-radius: 14px;
+  overflow: hidden;
   text-align: center;
-  transition: .3s;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #c026ff;
-  box-shadow: 0 0 20px #40116b;
+.category {
+  padding: 22px 10px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.icon { font-size: 48px; }
-
-.card h3 {
-  font-size: 21px;
-  margin: 10px 0;
+.category:hover, .card:hover {
+  border-color: #c084fc;
+  transform: translateY(-3px);
 }
 
-.card p { color: #bfb5ce; }
+.icon {
+  font-size: 38px;
+}
+
+.category h3, .card h3 {
+  color: #e9d5ff;
+}
+
+.category p, .card p {
+  color: #ccc;
+  line-height: 1.7;
+}
 
 .price {
+  color: #d8b4fe;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.preview {
+  height: 135px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
   font-size: 25px;
   font-weight: bold;
-  color: #d8b4fe;
-  margin: 15px 0;
 }
 
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  margin-top: 30px;
+.preview small {
+  font-size: 12px;
 }
 
-.feature {
-  text-align: center;
-  padding: 20px;
-  border-bottom: 1px solid #6121a1;
+.gaming {
+  background: linear-gradient(135deg, #30105c, #090914);
+  color: #e9d5ff;
 }
 
-.feature span {
-  display: block;
-  font-size: 30px;
+.personal {
+  background: linear-gradient(135deg, #075985, #111827);
 }
 
-.custom {
-  max-width: 650px;
-  margin: auto;
-  padding: 28px;
-  border: 1px solid #7c2cba;
-  border-radius: 20px;
-  background: #120c20;
+.teacher {
+  background: linear-gradient(135deg, #166534, #052e16);
 }
 
-input, textarea, select {
-  width: 100%;
+.restaurant {
+  background: linear-gradient(135deg, #9a3412, #431407);
+}
+
+.company {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+}
+
+.store {
+  background: linear-gradient(135deg, #9d174d, #500724);
+}
+
+.card-content {
   padding: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+#custom {
+  background: #12101c;
+  text-align: center;
+}
+
+input, textarea {
+  width: 100%;
+  max-width: 450px;
+  padding: 12px;
   margin: 8px 0;
-  border: 1px solid #50346a;
-  border-radius: 10px;
-  background: #090711;
+  border: 1px solid #514064;
+  background: #08080e;
   color: white;
+  border-radius: 8px;
   font-size: 16px;
 }
 
-textarea { resize: vertical; }
-
-.custom button { width: 100%; margin-top: 12px; }
-
-.contact {
-  text-align: center;
-  background: radial-gradient(ellipse, #35105c, #080710 75%);
+textarea {
+  min-height: 100px;
 }
 
 footer {
-  padding: 25px;
   text-align: center;
+  padding: 25px;
   color: #aaa;
-  border-top: 1px solid #57209b;
+  background: #11101c;
 }
 
-@media(max-width:600px) {
-  header { justify-content: center; text-align: center; }
-  nav { width: 100%; }
-  nav a { margin: 0 5px; font-size: 14px; }
-  .hero { padding: 55px 18px; }
-  section { padding: 40px 5%; }
+.back {
+  display: block;
+  margin: 15px auto;
 }
+
+.note {
+  text-align: center;
+  color: #aaa;
+  line-height: 1.8;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">✦ صمّملي | SAMEMLY</div>
-  <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#designs">التصميمات</a>
-    <a href="#custom">تصميم خاص</a>
-    <a href="#contact">تواصل معنا</a>
-  </nav>
+  <div class="logo">💜 SAMEMLY</div>
+  <p>صمّملي موقعك على ذوقك وبالسعر المناسب</p>
 </header>
 
-<main>
-<section class="hero" id="home">
-  <h1>حوّل فكرتك إلى<br><span class="purple">موقع احترافي!</span></h1>
-  <p>
-    أهلاً بيك في صمّملي! 💜<br>
-    اختار تصميمك، وحدد ميزانيتك، وسيب الباقي علينا.
-    تصميمات مميزة بأسعار مناسبة.
-  </p>
-  <a class="button" href="#designs">اكتشف التصميمات ↓</a>
-</section>
+<div id="home">
 
-<section id="designs">
-  <h2 class="section-title">التصميمات والأسعار</h2>
-  <p class="subtitle">اختار التصميم المناسب ليك واطلبه على واتساب</p>
-
-  <div class="grid">
-
-    <article class="card">
-      <div class="icon">👤</div>
-      <h3>موقع شخصي</h3>
-      <p>اعرض نفسك ومهاراتك وأعمالك بشكل احترافي.</p>
-      <div class="price">20 جنيه</div>
-      <a class="button" href="#" onclick="order('موقع شخصي',20);return false;">اطلب الآن</a>
-    </article>
-
-    <article class="card">
-      <div class="icon">🎮</div>
-      <h3>موقع ألعاب</h3>
-      <p>تصميم مناسب للجيمرز وصناع المحتوى.</p>
-      <div class="price">40 جنيه</div>
-      <a class="button" href="#" onclick="order('موقع ألعاب',40);return false;">اطلب الآن</a>
-    </article>
-
-    <article class="card">
-      <div class="icon">📚</div>
-      <h3>موقع مدرس</h3>
-      <p>اعرض المواد والدروس والامتحانات لطلابك.</p>
-      <div class="price">50 جنيه</div>
-      <a class="button" href="#" onclick="order('موقع مدرس',50);return false;">اطلب الآن</a>
-    </article>
-
-    <article class="card">
-      <div class="icon">🍔</div>
-      <h3>موقع مطعم</h3>
-      <p>اعرض المنيو والوجبات ومعلومات التواصل.</p>
-      <div class="price">50 جنيه</div>
-      <a class="button" href="#" onclick="order('موقع مطعم',50);return false;">اطلب الآن</a>
-    </article>
-
-    <article class="card">
-      <div class="icon">🏢</div>
-      <h3>موقع شركة</h3>
-      <p>عرّف العملاء بخدمات شركتك وأعمالك.</p>
-      <div class="price">75 جنيه</div>
-      <a class="button" href="#" onclick="order('موقع شركة',75);return false;">اطلب الآن</a>
-    </article>
-
-    <article class="card">
-      <div class="icon">🛒</div>
-      <h3>متجر إلكتروني</h3>
-      <p>اعرض منتجاتك بطريقة منظمة وجذابة.</p>
-      <div class="price">100 جنيه</div>
-      <a class="button" href="#" onclick="order('متجر إلكتروني',100);return false;">اطلب الآن</a>
-    </article>
-
+  <div class="hero">
+    <h1>موقعك يبدأ من هنا 🚀</h1>
+    <p>
+      اختار نوع الموقع اللي محتاجه، وشوف أفكار تصميمات مختلفة،
+      وبعدها اطلب تصميمك بسهولة.
+    </p>
+    <a href="#categories" class="button">شوف التصميمات</a>
+    <a href="#custom" class="button">اطلب موقع خاص</a>
   </div>
+
+  <section id="categories">
+    <h2>🎨 اختار قسم التصميمات</h2>
+
+    <div class="categories">
+
+      <div class="category" onclick="openCategory('gaming')">
+        <div class="icon">🎮</div>
+        <h3>Gaming</h3>
+        <p>مواقع الألعاب والجيمرز</p>
+        <div class="price">40 جنيه</div>
+      </div>
+
+      <div class="category" onclick="openCategory('personal')">
+        <div class="icon">👤</div>
+        <h3>موقع شخصي</h3>
+        <p>اعرض نفسك وأعمالك</p>
+        <div class="price">20 جنيه</div>
+      </div>
+
+      <div class="category" onclick="openCategory('teacher')">
+        <div class="icon">📚</div>
+        <h3>مواقع المدرسين</h3>
+        <p>دروس ومواد وامتحانات</p>
+        <div class="price">50 جنيه</div>
+      </div>
+
+      <div class="category" onclick="openCategory('restaurant')">
+        <div class="icon">🍔</div>
+        <h3>المطاعم</h3>
+        <p>منيو وعروض وطلبات</p>
+        <div class="price">50 جنيه</div>
+      </div>
+
+      <div class="category" onclick="openCategory('company')">
+        <div class="icon">🏢</div>
+        <h3>الشركات</h3>
+        <p>اعرض خدمات شركتك</p>
+        <div class="price">75 جنيه</div>
+      </div>
+
+      <div class="category" onclick="openCategory('store')">
+        <div class="icon">🛒</div>
+        <h3>المتاجر الإلكترونية</h3>
+        <p>اعرض منتجاتك للبيع</p>
+        <div class="price">100 جنيه</div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- صفحة التصميمات -->
+<section id="gallery" class="hidden">
+  <h2 id="galleryTitle">التصميمات</h2>
+  <p class="note">اختار الشكل اللي يعجبك واضغط على طلب التصميم.</p>
+
+  <div id="designList" class="designs"></div>
+
+  <button class="button back" onclick="goHome()">⬅ رجوع للأقسام</button>
 </section>
 
-<section>
-  <h2 class="section-title">ليه تختار صمّملي؟</h2>
-  <div class="features">
-    <div class="feature">
-      <span>⚡</span>
-      <h3>سرعة في التنفيذ</h3>
-      <p>نهتم بتسليم طلبك في الوقت المتفق عليه.</p>
-    </div>
-    <div class="feature">
-      <span>💎</span>
-      <h3>تصميم مميز</h3>
-      <p>نهتم بشكل موقعك وتجربة استخدامه.</p>
-    </div>
-    <div class="feature">
-      <span>💰</span>
-      <h3>أسعار مناسبة</h3>
-      <p>اختار التصميم اللي يناسب ميزانيتك.</p>
-    </div>
-    <div class="feature">
-      <span>📱</span>
-      <h3>مناسب للموبايل</h3>
-      <p>تصميم مرن لمختلف أحجام الشاشات.</p>
-    </div>
-  </div>
-</section>
-
+<!-- الطلب الخاص -->
 <section id="custom">
-  <h2 class="section-title">عايز تصميم مخصوص؟</h2>
-  <p class="subtitle">
-    احكيلنا فكرتك! الأسعار بتبدأ من 250 جنيه حسب تفاصيل المشروع.
+  <h2>✨ عايز موقع بتصميم خاص؟</h2>
+  <p class="note">
+    احكي لنا فكرتك، والسعر يبدأ من 250 جنيه حسب المطلوب.
   </p>
 
-  <form class="custom" onsubmit="customOrder(event)">
+  <form onsubmit="sendCustom(event)">
     <input id="customerName" placeholder="اسمك" required>
-    <input id="customerType" placeholder="نوع الموقع اللي محتاجه" required>
-    <select id="budget">
-      <option value="250 إلى 500 جنيه">الميزانية: 250–500 جنيه</option>
-      <option value="500 إلى 1000 جنيه">الميزانية: 500–1000 جنيه</option>
-      <option value="أكثر من 1000 جنيه">الميزانية: أكثر من 1000 جنيه</option>
-      <option value="نتفق عليها بعد التفاصيل">نتفق على السعر بعد التفاصيل</option>
-    </select>
-    <textarea id="details" rows="4" placeholder="اشرح فكرتك والتفاصيل اللي محتاجها" required></textarea>
-    <button class="button" type="submit">ابعث طلبك على واتساب</button>
+    <input id="customerPhone" placeholder="رقم موبايلك" required>
+    <textarea id="customerIdea"
+      placeholder="وصف الموقع اللي محتاجه بالتفصيل..."
+      required></textarea>
+    <button class="button" type="submit">إرسال الطلب على واتساب</button>
   </form>
 </section>
 
-<section class="contact" id="contact">
-  <h2 class="section-title">جاهز تبدأ مشروعك؟</h2>
-  <p class="subtitle">كل فكرة كبيرة بتبدأ بخطوة صغيرة 💜</p>
-  <a class="button" href="https://wa.me/201080637195" target="_blank" rel="noopener">
-    تواصل معنا على واتساب
-  </a>
-</section>
-</main>
-
 <footer>
-  © 2026 صمّملي | SAMEMLY — جميع الحقوق محفوظة
+  <div class="logo">SAMEMLY 💜</div>
+  <p>صمّملي موقعك بطريقتك</p>
+  <p>جميع الحقوق محفوظة © 2026</p>
 </footer>
 
 <script>
 const whatsappNumber = "201080637195";
 
-function order(name, price) {
-  const message = `السلام عليكم، عايز أطلب ${name} من موقع صمّملي بسعر ${price} جنيه.`;
-  window.open(
-    "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message),
-    "_blank"
-  );
+const categories = {
+  gaming: {
+    title: "🎮 تصميمات مواقع الجيمينج",
+    name: "Gaming",
+    price: 40,
+    designs: [
+      {
+        name: "Neon Gamer",
+        style: "gaming",
+        icon: "🎮",
+        desc: "تصميم نيون بنفسجي لمحبي الألعاب"
+      },
+      {
+        name: "Pro Player",
+        style: "gaming",
+        icon: "⚡",
+        desc: "تصميم احترافي للاعبين"
+      },
+      {
+        name: "Gaming Channel",
+        style: "gaming",
+        icon: "👾",
+        desc: "موقع لقناتك ومحتوى الألعاب"
+      }
+    ]
+  },
+
+  personal: {
+    title: "👤 تصميمات المواقع الشخصية",
+    name: "موقع شخصي",
+    price: 20,
+    designs: [
+      {
+        name: "My Profile",
+        style: "personal",
+        icon: "👤",
+        desc: "صفحة شخصية بسيطة وأنيقة"
+      },
+      {
+        name: "My Portfolio",
+        style: "personal",
+        icon: "💼",
+        desc: "اعرض أعمالك ومهاراتك"
+      },
+      {
+        name: "Personal Neon",
+        style: "gaming",
+        icon: "✨",
+        desc: "تصميم شخصي بألوان نيون"
+      }
+    ]
+  },
+
+  teacher: {
+    title: "📚 تصميمات مواقع المدرسين",
+    name: "موقع مدرس",
+    price: 50,
+    designs: [
+      {
+        name: "Teacher Academy",
+        style: "teacher",
+        icon: "📚",
+        desc: "مواد دراسية ودروس"
+      },
+      {
+        name: "Exam Center",
+        style: "teacher",
+        icon: "📝",
+        desc: "صفحة للامتحانات والدرجات"
+      },
+      {
+        name: "Online Learning",
+        style: "personal",
+        icon: "🎓",
+        desc: "تصميم للتعليم أونلاين"
+      }
+    ]
+  },
+
+  restaurant: {
+    title: "🍔 تصميمات مواقع المطاعم",
+    name: "موقع مطعم",
+    price: 50,
+    designs: [
+      {
+        name: "Food Menu",
+        style: "restaurant",
+        icon: "🍔",
+        desc: "منيو للأكلات والأسعار"
+      },
+      {
+        name: "Pizza House",
+        style: "restaurant",
+        icon: "🍕",
+        desc: "تصميم لمطعم بيتزا"
+      },
+      {
+        name: "Coffee Shop",
+        style: "company",
+        icon: "☕",
+        desc: "تصميم لكافيه"
+      }
+    ]
+  },
+
+  company: {
+    title: "🏢 تصميمات مواقع الشركات",
+    name: "موقع شركة",
+    price: 75,
+    designs: [
+      {
+        name: "Business Pro",
+        style: "company",
+        icon: "🏢",
+        desc: "تصميم رسمي للشركات"
+      },
+      {
+        name: "Digital Agency",
+        style: "gaming",
+        icon: "💻",
+        desc: "موقع للخدمات الرقمية"
+      },
+      {
+        name: "Company Profile",
+        style: "personal",
+        icon: "📊",
+        desc: "عرض الخدمات ومعلومات الشركة"
+      }
+    ]
+  },
+
+  store: {
+    title: "🛒 تصميمات المتاجر الإلكترونية",
+    name: "متجر إلكتروني",
+    price: 100,
+    designs: [
+      {
+        name: "Fashion Store",
+        style: "store",
+        icon: "👕",
+        desc: "متجر ملابس ومنتجات"
+      },
+      {
+        name: "Tech Store",
+        style: "company",
+        icon: "📱",
+        desc: "متجر إلكترونيات"
+      },
+      {
+        name: "Shopping Plus",
+        style: "store",
+        icon: "🛍️",
+        desc: "تصميم متجر عصري"
+      }
+    ]
+  }
+};
+
+function openCategory(key) {
+  const category = categories[key];
+
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("custom").classList.add("hidden");
+  document.getElementById("gallery").classList.remove("hidden");
+
+  document.getElementById("galleryTitle").textContent = category.title;
+
+  const list = document.getElementById("designList");
+  list.innerHTML = "";
+
+  category.designs.forEach((design, index) => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const preview = document.createElement("div");
+    preview.className = "preview " + design.style;
+
+    const icon = document.createElement("span");
+    icon.textContent = design.icon;
+
+    const title = document.createElement("small");
+    title.textContent = design.name;
+
+    preview.appendChild(icon);
+    preview.appendChild(title);
+
+    const content = document.createElement("div");
+    content.className = "card-content";
+
+    const heading = document.createElement("h3");
+    heading.textContent = design.name;
+
+    const description = document.createElement("p");
+    description.textContent = design.desc;
+
+    const price = document.createElement("div");
+    price.className = "price";
+    price.textContent = category.price + " جنيه";
+
+    const button = document.createElement("button");
+    button.className = "button";
+    button.textContent = "اطلب التصميم";
+
+    button.onclick = function() {
+      const message =
+        "مرحبًا، أريد طلب تصميم موقع من صمّملي SAMEMLY\n" +
+        "القسم: " + category.name + "\n" +
+        "التصميم: " + design.name + "\n" +
+        "السعر المبدئي: " + category.price + " جنيه";
+
+      window.open(
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + encodeURIComponent(message),
+        "_blank"
+      );
+    };
+
+    content.appendChild(heading);
+    content.appendChild(description);
+    content.appendChild(price);
+    content.appendChild(button);
+
+    card.appendChild(preview);
+    card.appendChild(content);
+    list.appendChild(card);
+  });
+
+  window.scrollTo(0, 0);
 }
 
-function customOrder(event) {
+function goHome() {
+  document.getElementById("gallery").classList.add("hidden");
+  document.getElementById("home").classList.remove("hidden");
+  document.getElementById("custom").classList.remove("hidden");
+  window.scrollTo(0, 0);
+}
+
+function sendCustom(event) {
   event.preventDefault();
 
-  const name = document.getElementById("customerName").value.trim();
-  const type = document.getElementById("customerType").value.trim();
-  const budget = document.getElementById("budget").value;
-  const details = document.getElementById("details").value.trim();
+  const name = document.getElementById("customerName").value;
+  const phone = document.getElementById("customerPhone").value;
+  const idea = document.getElementById("customerIdea").value;
 
   const message =
-    "طلب تصميم خاص من صمّملي 💜\n" +
+    "طلب تصميم موقع خاص من SAMEMLY\n" +
     "الاسم: " + name + "\n" +
-    "نوع الموقع: " + type + "\n" +
-    "الميزانية: " + budget + "\n" +
-    "التفاصيل: " + details;
+    "رقم الهاتف: " + phone + "\n" +
+    "فكرة الموقع: " + idea + "\n" +
+    "السعر يبدأ من 250 جنيه حسب المطلوب.";
 
   window.open(
-    "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message),
+    "https://wa.me/" + whatsappNumber +
+    "?text=" + encodeURIComponent(message),
     "_blank"
   );
 }
