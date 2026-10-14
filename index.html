@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صمّملي | SAMEMLY</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080710;
+  color: white;
+  line-height: 1.8;
+}
+
+header {
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  border-bottom: 1px solid #57209b;
+  background: #0b0915;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: bold;
+  color: #c084fc;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+nav a:hover { color: #c084fc; }
+
+.button {
+  display: inline-block;
+  background: linear-gradient(90deg, #7c18ff, #c026ff);
+  color: white;
+  padding: 12px 23px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px #8b20ff;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(ellipse at top, #35105c, #080710 70%);
+}
+
+.hero h1 {
+  font-size: clamp(36px, 7vw, 60px);
+  line-height: 1.4;
+}
+
+.purple { color: #c084fc; }
+
+.hero p {
+  color: #d0c6df;
+  margin: 18px auto 25px;
+  max-width: 600px;
+}
+
+section { padding: 55px 6%; }
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #c4b5d8;
+  margin-bottom: 35px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #171126, #0d0b16);
+  border: 1px solid #59219a;
+  border-radius: 18px;
+  padding: 25px 18px;
+  text-align: center;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #c026ff;
+  box-shadow: 0 0 20px #40116b;
+}
+
+.icon { font-size: 48px; }
+
+.card h3 {
+  font-size: 21px;
+  margin: 10px 0;
+}
+
+.card p { color: #bfb5ce; }
+
+.price {
+  font-size: 25px;
+  font-weight: bold;
+  color: #d8b4fe;
+  margin: 15px 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #6121a1;
+}
+
+.feature span {
+  display: block;
+  font-size: 30px;
+}
+
+.custom {
+  max-width: 650px;
+  margin: auto;
+  padding: 28px;
+  border: 1px solid #7c2cba;
+  border-radius: 20px;
+  background: #120c20;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  border: 1px solid #50346a;
+  border-radius: 10px;
+  background: #090711;
+  color: white;
+  font-size: 16px;
+}
+
+textarea { resize: vertical; }
+
+.custom button { width: 100%; margin-top: 12px; }
+
+.contact {
+  text-align: center;
+  background: radial-gradient(ellipse, #35105c, #080710 75%);
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #aaa;
+  border-top: 1px solid #57209b;
+}
+
+@media(max-width:600px) {
+  header { justify-content: center; text-align: center; }
+  nav { width: 100%; }
+  nav a { margin: 0 5px; font-size: 14px; }
+  .hero { padding: 55px 18px; }
+  section { padding: 40px 5%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">✦ صمّملي | SAMEMLY</div>
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#designs">التصميمات</a>
+    <a href="#custom">تصميم خاص</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <h1>حوّل فكرتك إلى<br><span class="purple">موقع احترافي!</span></h1>
+  <p>
+    أهلاً بيك في صمّملي! 💜<br>
+    اختار تصميمك، وحدد ميزانيتك، وسيب الباقي علينا.
+    تصميمات مميزة بأسعار مناسبة.
+  </p>
+  <a class="button" href="#designs">اكتشف التصميمات ↓</a>
+</section>
+
+<section id="designs">
+  <h2 class="section-title">التصميمات والأسعار</h2>
+  <p class="subtitle">اختار التصميم المناسب ليك واطلبه على واتساب</p>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="icon">👤</div>
+      <h3>موقع شخصي</h3>
+      <p>اعرض نفسك ومهاراتك وأعمالك بشكل احترافي.</p>
+      <div class="price">20 جنيه</div>
+      <a class="button" href="#" onclick="order('موقع شخصي',20);return false;">اطلب الآن</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">🎮</div>
+      <h3>موقع ألعاب</h3>
+      <p>تصميم مناسب للجيمرز وصناع المحتوى.</p>
+      <div class="price">40 جنيه</div>
+      <a class="button" href="#" onclick="order('موقع ألعاب',40);return false;">اطلب الآن</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">📚</div>
+      <h3>موقع مدرس</h3>
+      <p>اعرض المواد والدروس والامتحانات لطلابك.</p>
+      <div class="price">50 جنيه</div>
+      <a class="button" href="#" onclick="order('موقع مدرس',50);return false;">اطلب الآن</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">🍔</div>
+      <h3>موقع مطعم</h3>
+      <p>اعرض المنيو والوجبات ومعلومات التواصل.</p>
+      <div class="price">50 جنيه</div>
+      <a class="button" href="#" onclick="order('موقع مطعم',50);return false;">اطلب الآن</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">🏢</div>
+      <h3>موقع شركة</h3>
+      <p>عرّف العملاء بخدمات شركتك وأعمالك.</p>
+      <div class="price">75 جنيه</div>
+      <a class="button" href="#" onclick="order('موقع شركة',75);return false;">اطلب الآن</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">🛒</div>
+      <h3>متجر إلكتروني</h3>
+      <p>اعرض منتجاتك بطريقة منظمة وجذابة.</p>
+      <div class="price">100 جنيه</div>
+      <a class="button" href="#" onclick="order('متجر إلكتروني',100);return false;">اطلب الآن</a>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">ليه تختار صمّملي؟</h2>
+  <div class="features">
+    <div class="feature">
+      <span>⚡</span>
+      <h3>سرعة في التنفيذ</h3>
+      <p>نهتم بتسليم طلبك في الوقت المتفق عليه.</p>
+    </div>
+    <div class="feature">
+      <span>💎</span>
+      <h3>تصميم مميز</h3>
+      <p>نهتم بشكل موقعك وتجربة استخدامه.</p>
+    </div>
+    <div class="feature">
+      <span>💰</span>
+      <h3>أسعار مناسبة</h3>
+      <p>اختار التصميم اللي يناسب ميزانيتك.</p>
+    </div>
+    <div class="feature">
+      <span>📱</span>
+      <h3>مناسب للموبايل</h3>
+      <p>تصميم مرن لمختلف أحجام الشاشات.</p>
+    </div>
+  </div>
+</section>
+
+<section id="custom">
+  <h2 class="section-title">عايز تصميم مخصوص؟</h2>
+  <p class="subtitle">
+    احكيلنا فكرتك! الأسعار بتبدأ من 250 جنيه حسب تفاصيل المشروع.
+  </p>
+
+  <form class="custom" onsubmit="customOrder(event)">
+    <input id="customerName" placeholder="اسمك" required>
+    <input id="customerType" placeholder="نوع الموقع اللي محتاجه" required>
+    <select id="budget">
+      <option value="250 إلى 500 جنيه">الميزانية: 250–500 جنيه</option>
+      <option value="500 إلى 1000 جنيه">الميزانية: 500–1000 جنيه</option>
+      <option value="أكثر من 1000 جنيه">الميزانية: أكثر من 1000 جنيه</option>
+      <option value="نتفق عليها بعد التفاصيل">نتفق على السعر بعد التفاصيل</option>
+    </select>
+    <textarea id="details" rows="4" placeholder="اشرح فكرتك والتفاصيل اللي محتاجها" required></textarea>
+    <button class="button" type="submit">ابعث طلبك على واتساب</button>
+  </form>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">جاهز تبدأ مشروعك؟</h2>
+  <p class="subtitle">كل فكرة كبيرة بتبدأ بخطوة صغيرة 💜</p>
+  <a class="button" href="https://wa.me/201080637195" target="_blank" rel="noopener">
+    تواصل معنا على واتساب
+  </a>
+</section>
+</main>
+
+<footer>
+  © 2026 صمّملي | SAMEMLY — جميع الحقوق محفوظة
+</footer>
+
+<script>
+const whatsappNumber = "201080637195";
+
+function order(name, price) {
+  const message = `السلام عليكم، عايز أطلب ${name} من موقع صمّملي بسعر ${price} جنيه.`;
+  window.open(
+    "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message),
+    "_blank"
+  );
+}
+
+function customOrder(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("customerName").value.trim();
+  const type = document.getElementById("customerType").value.trim();
+  const budget = document.getElementById("budget").value;
+  const details = document.getElementById("details").value.trim();
+
+  const message =
+    "طلب تصميم خاص من صمّملي 💜\n" +
+    "الاسم: " + name + "\n" +
+    "نوع الموقع: " + type + "\n" +
+    "الميزانية: " + budget + "\n" +
+    "التفاصيل: " + details;
+
+  window.open(
+    "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+  </html>
